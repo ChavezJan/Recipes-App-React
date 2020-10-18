@@ -4,8 +4,10 @@ import './App.css';
 
 const App = () => {
 
-  const APP_ID = 'c3714c00';
-  const APP_KEY = '63a73d1b3ec723334e6c881d9b54401a';
+  // create an account in https://www.edamam.com/ and put the id and the key so it can work
+
+  const APP_ID = '';
+  const APP_KEY = '';
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
