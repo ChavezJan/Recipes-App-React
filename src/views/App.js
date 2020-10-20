@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import Recipe from './Recipe';
-import './App.css';
+import Recipe from '../components/Recipe';
+import '../assets/style/App.css';
+
 
 const App = () => {
 
-  // create an account in https://www.edamam.com/ and put the id and the key so it can work
-
-  const APP_ID = '';
-  const APP_KEY = '';
+  const APP_ID = 'c3714c00';
+  const APP_KEY = '63a73d1b3ec723334e6c881d9b54401a';
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('chicken');
 
+  // create an account in https://www.edamam.com/ and put the id and the key so it can work
   // Web API to fiend the recipes -> return JSON
   const exampleReq = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
 
@@ -39,7 +39,6 @@ const App = () => {
     setQuery(search);
     setSearch('');
   };
-
   return(
     <div className='App'>
       <form 
@@ -58,7 +57,7 @@ const App = () => {
             <Recipe
               key={recipe.recipe.label}
               title={recipe.recipe.label} 
-              calories={recipe.recipe.calories} 
+              calories={(recipe.recipe.calories).toFixed(2)} 
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}
             />

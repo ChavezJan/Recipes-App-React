@@ -12,6 +12,13 @@
 
 .image {
   border-radius: 60%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.calories {
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
 }
